@@ -107,6 +107,12 @@ services:
   packages:
   - name: SIQA_OriginTest_OnPremAssets
     version: "1.0"
+- serviceName: project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:newDBInsert
+  packages:
+  - name: SIQA_GitRuntimeAutomationAZURESPROProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
 configurationVariables:
   ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.user
   : sa
