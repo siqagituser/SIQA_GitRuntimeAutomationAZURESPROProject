@@ -8,7 +8,149 @@ packages:
   gitUsername: siqagituser
   gitBranch: main
 - name: SIQA_OriginTest_OnPremAssets
+  version: "1.0"
   gitServerName: siqagituser
   gitUrl: https://github.com/vijetadixit
   gitUsername: siqagituser
   gitBranch: Test
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: softwareag
+services:
+- serviceName: project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:NewAccount
+  packages:
+  - name: SIQA_GitRuntimeAutomationAZURESPROProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBInsert
+  packages:
+  - name: SIQA_GitRuntimeAutomationAZURESPROProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: project.siqa_gitruntimeautomationazurespro.integrations:SIQAAdapterFlow
+  packages:
+  - name: SIQA_GitRuntimeAutomationAZURESPROProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: project.siqa_gitruntimeautomationazurespro.integrations:SIQA_E2E_Mon_Test
+  packages:
+  - name: SIQA_GitRuntimeAutomationAZURESPROProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: pub.string:bytesToString
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: project.siqa_gitruntimeautomationazurespro.integrations:SIQA_ThirdPPEdgeFS
+  packages:
+  - name: SIQA_GitRuntimeAutomationAZURESPROProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:ComplexFS
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:Basic_Flow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.math:divideInts
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: pub.math:subtractInts
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: pub.math:multiplyIntList
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: Basics_1:mapservice
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:TryCatch
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Map_1:TestFlow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: REST_1_1.CurrentDateAndTime:_get
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: pub.string:objectToString
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.936
+- serviceName: SOAP_1_1:showDateAndTime
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+configurationVariables:
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.user
+  : sa
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.blockingTimeout
+  : "5000"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.dbType
+  : MSSQL
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.transactionType
+  : LOCAL_TRANSACTION
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.portNumber
+  : "1433"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.keyStore
+  : ""
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.databaseName
+  : SIQACloud
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.maximumPoolSize
+  : "20"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.password
+  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.serverName
+  : vmiboint01
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionEnabled
+  : "false"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionManagerSettings.expireTimeout
+  : "5000"
+  ? artConnection.SIQA_GitRuntimeAutomationAZURESPROProject.project.siqa_gitruntimeautomationazurespro.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.NewAccount.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
